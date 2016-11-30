@@ -1,0 +1,24 @@
+{
+  "name": "taper",
+  "version": "0.1.0",
+  "description": "A silly clone of node tape",
+  "main": "taper.js",
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karlpokus/taper.git"
+  },
+  "keywords": [
+    "tape",
+    "clone",
+    "test"
+  ],
+  "author": "Karl Pokus <karl.pokus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karlpokus/taper/issues"
+  },
+  "homepage": "https://github.com/karlpokus/taper#readme"
+}
