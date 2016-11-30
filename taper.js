@@ -39,8 +39,9 @@ Test.prototype.pass = function(name) {
   });
 }
 
+// end
 Test.prototype.end = function() {
-  console.log('# ' + this.name);
+  console.log('\n# ' + this.name);
   this.data.forEach(function(o){
     console.log(o.v, o.name);
   });
