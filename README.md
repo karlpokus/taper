@@ -8,12 +8,20 @@ var test = require('./taper'),
 
 test('test A', function(t){
   t.equal(lib.fn(), true, 'lib.fn'); // Assume lib.fn returns true
+  t.notOk(false);
   t.end(); // required
 });
+
+// logs
+// # test A
+// ok lib.fn
+// ok anonymous
 ```
 
 # api
 `name` is optional
+### test([name,] cb)
+Start a new testblock. Optionally give it a name. `cb` will be called with a test object with the methods below.
 ### t.ok(v [,name])
 Assert `v` is truthy
 ### t.notOk(v [,name])
@@ -32,6 +40,8 @@ $ npm test
 
 # todos
 - [ ] test summary
+- [ ] error report
+- [ ] handle async tests with pype?
 
 # licence
 MIT
