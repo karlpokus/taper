@@ -19,7 +19,7 @@ test('test A', function(t){
 ```
 
 # api
-`name` is optional
+Note: `name` is always optional
 ### test([name,] cb)
 Start a new testblock. Optionally give it a name. `cb` will be called with a test object with the methods below.
 ### t.ok(v [,name])
@@ -30,8 +30,10 @@ Assert `v` is falsy
 Assert `x === y`
 ### t.pass([name])
 Assert `true`
+### t.throws(fn, regex [,name])
+Assert that `regex` matches error message thrown by `fn`
 ### t.end()
-`Required` Ends testblock and logs result.
+**Required** Ends testblock and logs result.
 
 # test
 ```bash

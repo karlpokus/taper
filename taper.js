@@ -39,6 +39,25 @@ Test.prototype.pass = function(name) {
   });
 }
 
+// throws
+Test.prototype.throws = function(fn, regex, name) {
+  var wat = Object.prototype.toString,
+      v;
+  
+  try {
+    fn();
+    v = 'not ok';
+    
+  } catch(e) {
+    v = wat.call(regex) === "[object RegExp]" && regex.test(e.message)? 'ok': 'not ok';
+  }
+  
+  this.data.push({
+    v: v,
+    name: setName(name)
+  });
+}
+
 // end
 Test.prototype.end = function() {
   console.log('\n# ' + this.name);
