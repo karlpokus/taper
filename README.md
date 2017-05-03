@@ -28,6 +28,8 @@ Assert `v` is truthy
 Assert `v` is falsy
 ### t.equal(x, y [,name])
 Assert `x === y`
+### t.almostEqual(x, y [,name])
+Assert `x == y`
 ### t.pass([name])
 Assert `true`
 ### t.throws(fn, regex [,name])
@@ -41,9 +43,11 @@ $ npm test
 ```
 
 # todos
-- [ ] test summary
+- [x] test summary
 - [ ] error report
 - [ ] handle async tests with pype?
+- [ ] test as event emitter? `.onFinish`
+- [ ] `plan`
 
 # licence
 MIT
